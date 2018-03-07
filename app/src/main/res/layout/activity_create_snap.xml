@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.max.snaphat.CreateSnapActivity">
+    <ImageView
+        android:id="@+id/createSnapImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@color/colorAccent"
+        android:foregroundGravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/chooseImageButton"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="chooseImageClicked"
+        android:text="Choose image"/>
+    <EditText
+        android:id="@+id/messageEditText"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:hint="Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/nextButton"
+        android:text="next"
+        android:onClick="nextClicked"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
