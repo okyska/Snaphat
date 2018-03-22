@@ -95,6 +95,11 @@ class CreateSnapActivity : AppCompatActivity() {
             // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
             val downloadUrl = taskSnapshot.downloadUrl
             Log.i("URL", downloadUrl.toString())
+            val intent = Intent(this, ChooseUserActivity::class.java)
+            intent.putExtra("imageURL", downloadUrl.toString())
+            intent.putExtra("imageName", imageName)
+            intent.putExtra("message", messageEditText?.text.toString())
+            startActivity(intent)
         })
     }
 }

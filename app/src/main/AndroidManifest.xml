@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.max.snaphat">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
@@ -20,6 +21,10 @@
         <activity android:name=".SnapsActivity">
         </activity>
         <activity android:name=".CreateSnapActivity">
+        </activity>
+        <activity android:name=".ChooseUserActivity">
+        </activity>
+        <activity android:name=".ViewSnapActivity">
         </activity>
     </application>
 

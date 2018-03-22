@@ -18,6 +18,7 @@ import android.R.attr.password
 import android.content.Intent
 import android.support.v4.app.FragmentActivity
 import android.util.Log
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MainActivity : AppCompatActivity() {
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                         mAuth.createUserWithEmailAndPassword(emailEditText?.text.toString(), passwordEditText?.text.toString())
                                 .addOnCompleteListener(this) { task ->
                                     if (task.isSuccessful){
-                                //Add to database
+                                        FirebaseDatabase.getInstance().getReference().child("users").child(task.result.user.uid).child("email").setValue(emailEditText?.text.toString())
                                         logIn()
                                     } else {
                                         Toast.makeText(this, "Login failed. Try again.", Toast.LENGTH_SHORT).show()
